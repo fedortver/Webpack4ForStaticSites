@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 const fs = require('fs')
 
 function generateHtmlPlugins(templateDir) {
@@ -71,7 +72,10 @@ module.exports = {
                       removeAll: true,
                     },
                   }]
-                })
+					 }),
+					 require('autoprefixer')({
+						'browsers': ['> 1%', 'last 2 versions']
+				  })
               ]
             }
           },

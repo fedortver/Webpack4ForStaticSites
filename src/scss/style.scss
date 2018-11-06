@@ -1,6 +1,6 @@
 $font-stack: -apple-system, BlinkMacSystemFont,Roboto,'Open Sans','Helvetica Neue',sans-serif;
 
-@import "~bootstrap/scss/bootstrap";
+
 
 @font-face {
   font-family: 'Roboto';
@@ -16,7 +16,9 @@ body {
   }
   .container {
     img {
-      width: 20rem;
+		width: 20rem;
+		border-radius: 10px;
+		box-shadow: 0em;
     }
   }
 }
